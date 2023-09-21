@@ -8,7 +8,7 @@ class MultiCollinearity:
         df,
         y_col,
         corr_plot=False,
-        verbose=False,
+        verbose=True,
     ):
         if y_col not in df.columns:
             raise ValueError(f"{y_col} must be present in the dataframe")

@@ -13,7 +13,7 @@ This package can be used to remove features from your dataset in a way that help
 2. Initialize the class object:
 
 	```
-	mc = MultiCollinearity(df, target, verbose=True)
+	mc = MultiCollinearity(df, target)
 	```
 The first argument must be the name of the `pandas` dataframe, and the second argument is the name of the target column in that dataframe.
 
