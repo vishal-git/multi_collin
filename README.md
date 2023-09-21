@@ -96,4 +96,5 @@ We identify u<sub>4</sub> as the redundant eigenvector. Now x<sub>3</sub> has th
 <p align='left'>
 	<img src='./img/classical-and-modern-regression-w-applications.png' alt='Classical and Modern Regression with Applications' width='250'>
 </p>
-[Link](https://a.co/d/7PyVHSZ)
+
+[Link]('https://a.co/d/7PyVHSZ')
