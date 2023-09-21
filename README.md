@@ -2,7 +2,7 @@
 
 This package can be used to remove features from your dataset in a way that helps reduce multi-collinearity.
 
-## How to Use ::rocket::
+## How to Use :rocket:
 
 1. Import the `MultiCollinearity` class into your code:
 
@@ -49,9 +49,9 @@ Here are all parameters available in this function:
 * `cond_index_tol`: The condition index threshold value. If the condition index is higher than this threshold, feature reduction will commence. The feature reduction process will stop if the condition index value reaches below this threshold. (defauld: 30)
 * `min_vars_to_keep`: (Same as above.) The default value is set to 10, which means that the feature reduction process will stop if the number of features that are left in the dataframe reaches this value. Change this value according to your requirements.
 
-## How it Works ::gear::
+## How it Works :gear:
 
->> The original idea was presented (by yours truly) in PyData 2016. The [video](https://youtu.be/ioXKxulmwVQ?si=syt8UXPE0p41pT4w) is available online, but the sound quality is not very good.
+> The original idea was presented (by yours truly) in PyData 2016. The [video](https://youtu.be/ioXKxulmwVQ?si=syt8UXPE0p41pT4w) is available online, but the sound quality is not very good.
 
 The feature reduction is performed in two (sequential) steps:
 
@@ -72,7 +72,7 @@ This process will continue until either the pairwise correlation threshold is re
 
 First, eigenvalue decomposition is performed on the correlation matrix. There will be as many eigenvalues and eigenvectors calculated as the number of features. If multi-collinearity is present in the dataset, there will be at least one of these eigenvectors (aka directions) that is reduntant, i.e., it's not explaining any variance in the data. The redundant eigenvector can be identified by calculating **condition index** for each eigenvector. 
 
->> Condition Index = (max(eigenvalue) / min(eigenvalue)) ** .5
+> Condition Index = (max(eigenvalue) / min(eigenvalue)) ** .5
 
 The eigenvector with the highest condition index (above the threshold) is one of the culprits (to cause multi-collinearity in the data). We need to discard that particular direction. But since this is an eigenvector (and not a feature in the original dataframe), we can't remove it from the original dataframe. Instead, we will find out which feature has the highest factor loading on that eigenvector. We identify that feature that leans the heaviest on the eigenvector and discard it from the dataset. We repeat this process until one of the two criteria is met: `min_vars_to_keep` or `cond_index_tol`.
 
@@ -87,11 +87,11 @@ We identify u<sub>4</sub> as the redundant eigenvector. Now x<sub>3</sub> has th
 > [!NOTE]
 > Check out the [`example.ipynb`](./notebooks/example.ipynb) notebook in this repo which demonstrates the functionality of this package with the **Boston Housing** dataset.
 
-## TODO ::work::
+## TODO :ballot_box_with_check:
 1. Add test cases.
 2. Make it possible to run this without the presence of the target variable, i.e., do this in an unsupervised way.
 
-## SOURCE ::book::
+## SOURCE :book:
 
 <p align='center'>
 	[<img src='./img/classical-and-modern-regression-w-applications.png' alt='Classical and Modern Regression with Applications' width='650'>](https://a.co/d/7PyVHSZ)
