@@ -2,6 +2,11 @@
 
 This package can be used to remove features from your dataset in a way that helps reduce multi-collinearity.
 
+> [!NOTE]
+> If you're reading this on PyPI website, please head over to the [README](https://github.com/vishal-git/multi_collin/tree/main#multi-collinearity-reduction) file on the GitHub repo for better readability.
+
+
+
 ## How to Use :rocket:
 
 1. Import the `MultiCollinearity` class into your code:
